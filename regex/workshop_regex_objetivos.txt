@@ -1,0 +1,21 @@
+1 - Remover palavras desnecessárias (stopwords). Exemplos:
+	a) Excelentíssimo
+	b) Colenda
+	c) data venia
+2 - Melhorar a tokenização.
+	a) "Separar" entidades: Artigos 101, 1022-II e 1036§1º do CPC
+	b) Garantir que as entidades estejam intercaladas.
+3 - Dividir o texto em parágrafos.
+	a) divido por "."?
+	b) divido por "/n"?
+	c) divido por "</p>"?
+4 - Selecionar os parágrafos relevantes.
+	a) com a palavra "lei"
+	b) com a palavra "art"
+	c) com a palavra "súmula"
+5 - Identificar citações.
+	a) com a estrutura: :.{0,10}".{0,100}"
+6 - Identificar Ementas.
+7 - Remover cabeçalho e rodapé.
+8 - Unificar sinônimos.
+9 - Remover erros de português.
