@@ -1,0 +1,45 @@
+1,2,3,4,5,6,7,8,9,0,a.b c!d?e,
+1,2,3,4,5,6,7,8,9,0
+8.3,7.1,8.8,10.0
+Lista de arquivos mp3: jazz.mp3, rock.mp3, podcast.mp3, blues.mp3
+ca	r
+r	o s!
+a   b
+Você precisa responder sim, não ou não sei
+Bom\ndia
+Bom\tdia
+1,2,3,4,5,6,a.b c!d?e[f
+João não vai passear na moto.
+Nunca digo não ao nao.
+1,2,3,4,5,6,a.b c!d?e[f
+.$+*?-
+ABC [abc] a-c 1234
+1,2,3,4,5,6,a.b c!d?e	- f_g
+1,2,3,4,5,6,a.b c!d?e[f
+1: !"#$%&\'()*+,-./ 2: :;<=>?@
+áéíóú àèìòù ç ãõ ü
+De longe eu avistei o fogo e uma pessoa gritando FOGOOOOOO!
+There is a big fog in NYC
+Os números: 0123456789.
+O João recebeu 120 milhões apostando 6 9 21 23 45 46.
+<div>Conteúdo 01</div><div>Conteúdo 02</div>
+Você é muito engraçado... hehehehehe
+http://www.site.info
+www.escola.ginasial.br
+google.com.ar
+<b>Destaque</b><strong>Forte</strong><div>Conteúdo</div>
+Lentamente é mente muito lenta.
+Supermercado hipermercado minimercado mercado
+Pedrinho aprendeu direitinho o ABCabc!
+João é calmo, mas no trânsito fica nervoso.
+supermercado superação hipermercado mercado
+Romário era um excelente jogador, \nmas hoje é um político questionador
+dia diatonico diafragma média wikipédia bom_dia melodia radial
+
+
+
+
+
+
+
+

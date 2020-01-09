@@ -1,0 +1,282 @@
+**************************************
+
+1,2,3,4,5,6,7,8,9,0,a.b c!d?e,
+
+/,/
+/,/g
+/A/
+/A/g
+/A/gi
+/2/
+/2/g
+/c d!e/
+
+/,\|\.|\?|!| /g
+ 
+**************************************
+
+1,2,3,4,5,6,7,8,9,0
+8.3,7.1,8.8,10.0
+
+/1.2/g
+/1..2/g
+/1..,/g
+/8../g
+/.\../g
+ 
+**************************************
+
+Lista de arquivos mp3: jazz.mp3, rock.mp3, podcast.mp3, blues.mp3
+
+/.mp3/g
+/\.mp3/g
+/w+\.mp3/g
+
+**************************************
+
+ca	r
+r	o s!
+
+/ca/
+/ca\t/
+/ca\tr/
+/ca\tr\n/
+/ca\tr\nr/
+/ca\tr\nr\t/
+/ca\tr\nr\t\s/
+/ca\tr\nr\t\ss!/
+
+**************************************
+
+a   b
+
+\a   b\
+\a\s\s\sb\
+\a\s+b\
+\a {3}b\
+\a\s{3}b\
+
+
+**************************************
+
+Você precisa responder sim, não ou não sei
+
+/sim|não|sei/g
+/sim|não|não sei/
+
+**************************************
+
+Bom\ndia
+Bom\tdia
+
+/./g
+/.../g
+/..../g
+
+**************************************
+
+1,2,3,4,5,6,a.b c!d?e[f
+João não vai passear na moto.
+Nunca digo não ao nao.
+
+/[02468]/g
+/[42086]/g
+/n[aã]/g
+/n[aã]o/g
+
+**************************************
+
+1,2,3,4,5,6,a.b c!d?e[f
+
+/[a-z]/g
+/[b-d]/g
+/[2-4]/g
+/[A-Z1-3]/gi
+/[z-a]/g
+/[4-1]/g
+
+**************************************
+
+.$+*?-
+
+/[+.?*$]/g
+/[.]/g
+/[+.?*$]./g
+/[$-?]/g
+/[$\-?]/
+/[-?$]/
+
+**************************************
+
+ABC [abc] a-c 1234
+
+/[a-c]/g
+/a-c/g
+/[A-z]/g
+
+**************************************
+
+1,2,3,4,5,6,a.b c!d?e	- f_g
+
+/\d/g
+/\D/g
+/\w/g 
+/\W/g
+/\s/g
+/\S/g
+
+**************************************
+
+1,2,3,4,5,6,a.b c!d?e[f
+1: !"#$%&\'()*+,-./ 2: :;<=>?@
+
+/\D/g
+/\[ˆ0-9]/g
+/[ˆ\d!\?\[\s,\.]/g
+/[ˆ!-/:-@\s]/g
+
+**************************************
+
+áéíóú àèìòù ç ãõ ü
+
+/[À-ü]/g
+
+**************************************
+
+De longe eu avistei o fogo e uma pessoa gritando FOGOOOOOO!
+There is a big fog in NYC
+Os números: 0123456789.
+
+/fogo?/gi
+/fogo+/gi
+/[0-9]/
+/[0-9]+/
+/\d/
+/\d+/
+/fogo*/gi
+
+**************************************
+
+O João recebeu 120 milhões apostando 6 9 21 23 45 46.
+
+/\d{1,2}/g
+/\d{2}/g
+/\d{1,2}\s/g
+/\d{2}\s/g
+/\d{1,}/g
+/\w{7}/g
+/[\wõ]{7,}/g
+
+**************************************
+
+<div>Conteúdo 01</div><div>Conteúdo 02</div>
+
+? como quantificador:
+
+/<div>.?<\/div>/
+
+greedy: 
+
+/<div>.+<\/div>/
+/<div>.*<\/div>/
+/<div>.{0,100}<\/div>/
+
+lazy:
+
+/<div>.+?<\/div>/
+/<div>.*?<\/div>/
+/<div>.{0,100}?<\/div>/
+
+**************************************
+
+Você é muito engraçado... hehehehehe
+http://www.site.info
+www.escola.ginasial.br
+google.com.ar
+
+/(he)+/ 
+/(http:\/\/)?(www\.)?\w+\.\w{2,}(\.\w{2})?/g
+
+**************************************
+
+<b>Destaque</b><strong>Forte</strong><div>Conteúdo</div>
+Lentamente é mente muito lenta.
+
+/<(\w+)>.*<\/\1>/g 		=> problema: não capta \n
+/(lenta)(mente).*\2.*\1\./gi
+/(?:lenta)(mente).*\1/gi 	=> grupo que não captura o valor
+
+**************************************
+
+Supermercado hipermercado minimercado mercado
+
+/(super|hiper|mini)?mercado/g
+/((hi|su)per|mini)?mercado/g
+
+**************************************
+
+Pedrinho aprendeu direitinho o ABCabc!
+
+/[(abc)]/gi
+/([abc])/gi
+/(abc)/gi
+/(abc)+/gi
+
+**************************************
+
+João é calmo, mas no trânsito fica nervoso.
+supermercado superação hipermercado mercado
+
+/[\wÀ-ü]+/gi
+
+positive lookahead
+
+/[\wÀ-ü]+(?=,)/gi
+/[\wÀ-ü]+(?=\.)/gi
+/[\wÀ-ü]+(?=, mas)/gi
+
+negative lookahead
+
+/[\wÀ-ü]+[\s\.](?!,)/gi
+
+positive lookbehind
+
+/(?<=super)[\wÀ-ü]+/gi
+
+negative lookbehind
+
+/(?<!super)mercado/gi
+
+**************************************
+
+Romário era um excelente jogador, \nmas hoje é um político questionador
+
+/r/gi
+/^r/gi
+/r$/gi
+/^r.*r$/gi
+
+resolução do problema "dotall"
+
+/^r[\s\S]*r$/gi
+
+flag multiline
+
+/^(\w).+\1$/gi
+/^(\w).+\1$/gim
+
+**************************************
+
+dia diatonico diafragma média wikipédia bom_dia melodia radial
+
+/\bdia\w+/gi
+/\bdia\w*/gi
+/w+dia\b/gi
+/w+dia\w+/gi
+
+problema: acentuação - caracteres com acentos também são considerados bordas
+
+/\bdia\b/gi
+/(\S*)?dia(\S*)?/gi
+/([\wÀ-ü-]*)?dia([\wÀ-ü-]*)?/gi
+

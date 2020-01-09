@@ -1,0 +1,101 @@
+Regex = "método formal de especificar um padrão de texto"
+Exemplos: e-mails, números telefônicos, CEPs
+
+
+1) Flags:
+
+	g = global
+	i = ignore case
+	m = multiline
+
+2) Caracteres
+
+	- Literais x Metacaracteres
+
+	.	=> um caracter qualquer
+	[] 	=> um conjunto de caracteres (permitidos)
+	[ˆ]	=> um conjunto negado (proibidos)
+	?	=> quantificador zero ou um
+	*	=> quantificador zero ou mais
+	+	=> quantificador um ou mais
+	{n, m}	=> quantificador de n a m vezes
+	^	=> âncora início de linha
+	$ 	=> âncora fim de linha
+	\b	=> borda (início ou fim da palavra)
+	\	=> escape
+	|	=> ou
+	()	=> grupo
+	\1..\9	=> retrovisor (resgata grupos já definidos)
+
+	- Importância do contexto e da posição.
+
+	- Captura de caracteres isolados
+
+	. e \. => problema do "dotall"
+	\n
+	\t
+	\r
+	\s
+	|
+	ASCII e Unicode
+
+3) Conjuntos: []
+
+	- Intervalos (ranges): [...-...] => Observar ordem ASCII / Unicode
+
+	- Conjuntos e metacaracteres: dentro de um conjunto, alguns caracteres simples 		tornam-se metacaracteres e vice-versa.
+
+	- Metacaracteres de conjuntos: - [ ] ^
+
+	- Atalhos (shorthands) para conjuntos de caracteres
+
+	\d	=> dígitos 		<=> [0-9]
+	\D	=> não dígitos 		<=> [ˆ0-9]
+	\w	=> caracteres		<=> [a-zA-Z0-9_] (sem acento)
+	\W	=> não caracteres	<=> [ˆa-zA-Z0-9_] 
+	\s	=> espaços		<=> [ \t\n\r\f]
+	\S	=> não espaços		<=> [ˆ \t\n\r\f]
+
+	- Conjuntos negados: [^]
+
+	- Intervalos Unicode
+
+4) Quantificadores:
+
+	{n, m}	= aparece de n a m vezes
+	{n}	= aparece exatamente n vezes
+	{n,}	= aparece n ou mais vezes
+	{,n}	= aparece até n vezes
+	?	= aparece de zero ou uma vez	<=> {0,1} 
+	*	= aparece de zero ou mais vezes	<=> {0,}
+	+	= aparece de uma ou mais vezes	<=> {1,}
+
+	- Quantificadores "greedy" (gulosos - forma normal)
+
+	- Quantificadores "lazy" (não gulosos ou preguiçosos - precisam de ?)
+
+5) Grupos: ()
+
+	- Retrovisores: \1 ... \9
+
+	- Grupos aninhados
+
+	- Grupos especiais
+
+		positive lookahead
+		negative lookahead
+		positive lookbehind
+		negative lookbehind
+
+6) Âncoras
+
+	^	= início de linha
+	$	= fim de linha	
+
+	- Âncoras e o problema "dotall"
+
+	- Âncoras e flag multiline
+
+7) Bordas (de palavras): \b
+
+	- problema com acentuação - caracteres com acentos também são considerados bordas
