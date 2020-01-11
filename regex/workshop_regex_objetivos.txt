@@ -13,9 +13,14 @@
 	a) com a palavra "lei"
 	b) com a palavra "art"
 	c) com a palavra "súmula"
-5 - Identificar citações.
+5 - Parágrafos com uma única possibilidade de relação são ruins. Exemplo 
+    "Houve violação do Artigo 5 da Constituição Federal". É ruim porque é óbvio 
+    que a entidade "5" se liga à entidade "Constituição Federal", não precisa
+    de IA pra isso. Se não removermos parágrafos assim, as anotações desses
+    parágrafos serão úteis para o NER mas inúteis para a RE. Porém, não prejudica.
+6 - Identificar citações.
 	a) com a estrutura: :.{0,10}".{0,100}"
-6 - Identificar Ementas.
-7 - Remover cabeçalho e rodapé.
-8 - Unificar sinônimos.
-9 - Remover erros de português.
+7 - Identificar Ementas.
+8 - Remover cabeçalho e rodapé.
+9 - Unificar sinônimos.
+10 - Remover erros de português.
