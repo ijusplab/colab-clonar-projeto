@@ -4,7 +4,11 @@
 	c) data venia
 2 - Melhorar a tokenização.
 	a) "Separar" entidades: Artigos 101, 1022-II e 1036§1º do CPC
-	b) Garantir que as entidades estejam intercaladas.
+	b) Garantir que as entidades artigo, parágrafo, inciso, alínea, súmulas e 
+	temas sejam formadas por um único Token. Um exemplo é transformar 
+	"parágrafo único" em "parágrafo_único" e 170-A em 170A (170-A são 3 Tokens, 
+	170A é um único Token).
+	c) Garantir que as entidades estejam intercaladas.
 3 - Dividir o texto em parágrafos.
 	a) divido por "."?
 	b) divido por "/n"?
